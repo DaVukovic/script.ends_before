@@ -1,0 +1,47 @@
+# Kodi Media Center language file
+# Addon Name: Ends Before
+# Addon id: script.ends_before
+# Addon Provider: DaVu
+
+msgid ""
+msgstr ""
+
+msgctxt "#32001"
+msgid "Enter date:"
+msgstr "Datum angeben:"
+
+msgctxt "#32002"
+msgid "Enter time:"
+msgstr "Uhrzeit angeben:"
+
+msgctxt "#32003"
+msgid "No movie will end before the given time."
+msgstr "Kein Film endet vor der angegebenen Uhrzeit."
+
+msgctxt "#32004"
+msgid "No movie selected."
+msgstr "Es wurde kein Film ausgewählt."
+
+msgctxt "#32005"
+msgid "End time is before current time."
+msgstr "Angegene Zeit ist vor aktueller Uhrzeit."
+
+msgctxt "#32501"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "#32502"
+msgid "Use static hours:"
+msgstr "Fest angegebene Stunden verwenden:"
+
+msgctxt "#32503"
+msgid "If enabled, you are able to configure hours which will be added to the current time. Only integers are accepted like 1, 2, or 3. Floats are not supported"
+msgstr "Falls aktiviert, so kannst du hier die Anzahl der Stunden angeben, die auf die aktuelle Uhrzeit hinzu gerechnet werden sollen. Nur ganze Zahlen wie 1, 2, oder 3 werden unterstützt. Kommazahlen sind nicht unterstützt."
+
+msgctxt "#32504"
+msgid "Static hours:"
+msgstr "Feste Stunden:"
+
+msgctxt "#32505"
+msgid "Enter the hours you would like to add to the current time at this section."
+msgstr "Gib die Anzahl der Stunden, die du hinzu rechnen möchtest, hier an."

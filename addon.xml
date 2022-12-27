@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.ends_before" name="Ends Before" version="0.0.1" provider-name="DaVu">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="addon.py">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Lists and plays movies which will end before a given time.</summary>
+        <summary lang="de_DE">Listet und spielt Filme ab, die vor einer angegebenen Uhrzeit enden.</summary>
+        <description lang="en_GB">Ever thought of 'What movie am I able to watch which will end before xy-o`clock?'? If so, this addon is for you. It will list and play movies which will end before a given time.</description>
+        <description lang="de_DE">Jemals an 'Welchen Film kann ich noch schauen, der vor xy Uhr endet?' gedacht? Falls ja, dann ist dieses Add-on für dich. Es listet und spielt Filme ab, die vor einer angegebenen Uhrzeit enden.</description>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon>
