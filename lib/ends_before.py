@@ -66,12 +66,15 @@ def main():
     xbmc.log("Ends before: static hours set: " + str(getSettings.static_hours), level=xbmc.LOGDEBUG)
 
     if not getSettings.enable_static_hours:
-        endDate = DIALOG.input(LANGUAGE(32001), type=xbmcgui.INPUT_DATE)
-        endTime = DIALOG.input(LANGUAGE(32002), type=xbmcgui.INPUT_TIME)
+        userDate = DIALOG.input(LANGUAGE(32001), type=xbmcgui.INPUT_DATE)
+        userTime = DIALOG.input(LANGUAGE(32002), type=xbmcgui.INPUT_TIME)
+        # let's remove potential whitespaces
+        endDate = str(userDate.replace(" ", ""))
+        endTime = str(userTime.replace(" ", ""))
         maxDuration = str(calcTimes(endDate, endTime))
         if int(maxDuration) < 0:
             DIALOG.ok(ADDONNAME, LANGUAGE(32005))
-            sys.exit(0)
+            return
     else:
         maxDuration = int(getSettings.static_hours) * 3600
 
