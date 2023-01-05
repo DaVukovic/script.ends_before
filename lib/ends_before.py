@@ -54,7 +54,6 @@ def getMoviesJSON():
     allMovies = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "VideoLibrary.GetMovies", "params": { "properties" : ["runtime"]}, "id": "libMovies"}')
     allMoviesJSON = json.loads(allMovies)
     return allMoviesJSON
-    #DIALOG.ok(ADDONNAME, str(allMoviesJSON['result']['movies']))
 
 def playMovie(libraryID):
     xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Player.Open", "params": { "item" : {"movieid": %d } } }' %libraryID)
@@ -71,7 +70,13 @@ def main():
         # let's remove potential whitespaces
         endDate = str(userDate.replace(" ", ""))
         endTime = str(userTime.replace(" ", ""))
-        maxDuration = str(calcTimes(endDate, endTime))
+
+        # variables are empty if user hits ESC. We can't calculate anything with empty variables. 
+        if endDate and endTime:
+            maxDuration = str(calcTimes(endDate, endTime))
+        else:
+            xbmc.log("Ends before: Variables are empty", level=xbmc.LOGDEBUG)
+            return
         if int(maxDuration) < 0:
             DIALOG.ok(ADDONNAME, LANGUAGE(32005))
             return

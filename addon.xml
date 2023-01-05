@@ -5,6 +5,14 @@
     </requires>
     <extension point="xbmc.python.script" library="addon.py">
     </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="addon.py">
+                <label>32000</label>
+                <visible>String.IsEqual(ListItem.dbtype,movie)</visible>
+            </item>
+        </menu>
+    </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Lists and plays movies which will end before a given time.</summary>
         <summary lang="de_DE">Listet und spielt Filme ab, die vor einer angegebenen Uhrzeit enden.</summary>

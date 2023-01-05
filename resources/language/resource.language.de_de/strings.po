@@ -6,6 +6,10 @@
 msgid ""
 msgstr ""
 
+msgctxt "#32000"
+msgid "Ends before"
+msgstr "Endet vor"
+
 msgctxt "#32001"
 msgid "Enter date:"
 msgstr "Datum angeben:"
